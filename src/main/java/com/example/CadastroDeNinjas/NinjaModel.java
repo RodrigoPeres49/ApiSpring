@@ -1,7 +1,5 @@
 package com.example.CadastroDeNinjas;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 // Transformar classe em entidade do banco de dados
 @Entity
@@ -10,10 +8,11 @@ import jakarta.persistence.Table;
 public class NinjaModel {
 
     @Id
-    Long id;
-    String nome;
-    String email;
-    int idade;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String nome;
+    private String email;
+    private int idade;
 
     public NinjaModel() {
     }
