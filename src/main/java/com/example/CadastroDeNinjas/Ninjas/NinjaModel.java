@@ -1,4 +1,5 @@
-package com.example.CadastroDeNinjas;
+package com.example.CadastroDeNinjas.Ninjas;
+import com.example.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
 
 // Transformar classe em entidade do banco de dados
@@ -13,6 +14,7 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
+    private List<MissoesModel> missoes;
 
     public NinjaModel() {
     }
