@@ -12,9 +12,13 @@ public class MissoesModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String nome;
+
     private String dificuldade;
-    private NinjaModel ninja;
+
+    @OneToMany(mappedBy =  "missoes")
+    private List<NinjaModel> ninjas;
 
 
 }
