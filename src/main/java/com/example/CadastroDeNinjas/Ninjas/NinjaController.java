@@ -35,7 +35,7 @@ public class NinjaController {
 
     @GetMapping("/{id}")
     public ResponseEntity<NinjaModel> buscarPorId(@PathVariable Long id){
-        Optional<NinjaModel> ninja = NinjaRepository.findById(id);
+        Optional<NinjaModel> ninja = ninjaRepository.findById(id);
         return ninja.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
