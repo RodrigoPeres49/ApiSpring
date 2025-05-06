@@ -16,10 +16,6 @@ public class NinjaController {
     @Autowired
     private NinjaRepository ninjaRepository;
 
-    @GetMapping("/boasVindas")
-    public String boasVindas(){
-        return "Essa é minha primeira mensagem nessa rota!";
-    }
 
     @PostMapping
     public ResponseEntity<NinjaModel> criarNinja(@RequestBody NinjaModel ninja){
